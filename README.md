@@ -2,7 +2,7 @@
 
 **Generate secure passwords with options**
 
-_check pwg-cli for the command line tool_
+_check [pwg-cli](https://github.com/vgesteljasper/pwg-cli) for the command line tool_
 
 ## Installation
 
