@@ -1,0 +1,9 @@
+{
+  "name": "pwg",
+  "version": "1.0.0",
+  "description": "secure password generator with options",
+  "main": "index.js",
+  "repository": "https://github.com/vgesteljasper/pwg",
+  "author": "Jasper Van Gestel <vgesteljasper@gmail.com>",
+  "license": "MIT"
+}
