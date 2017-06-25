@@ -1,27 +1,23 @@
 module.exports = class Password {
 
-  constructor(length, symbols, digits) {
+  constructor(length = 20, digits = 0, symbols = 0) {
 
     if (length < symbols + digits)
-      throw new Error("Configuration error: length needs to be >= digits + symbols")
+      throw new Error('Configuration error: length needs to be >= digits + symbols')
 
     this.length = length
-    this.symbols = symbols
     this.digits = digits
+    this.symbols = symbols
 
-    this.generalChars = [
-      "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
-      "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
-    ]
+    this.generalChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+      'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-    this.symbolChars = [
-      "@", "#", "&", "(", ")", "§", "!", "{", "}", ">", "<", "[", "]",
-      "*", "/", "^", "%", "+", "-", ":", ";", "?", "=", ".", "$"
-    ]
+    this.symbolChars = ['@', '#', '&', '(', ')', '§', '!', '{', '}', '>', '<',
+      '[', ']', '*', '/', '^', '%', '+', '-', ':', ';', '?', '=', '.', '$']
   }
 
   toString() {
-    return this.generate()
+    return this.create()
   }
 
   get generalCount() {
@@ -48,7 +44,7 @@ module.exports = class Password {
     return value
   }
 
-  shuffle(array) {
+  _shuffle(array) {
     let m = array.length, t, i
     while (m) {
       i = Math.floor(Math.random() * m--)
@@ -59,7 +55,7 @@ module.exports = class Password {
     return array
   }
 
-  generate() {
+  create() {
 
     let array = []
 
@@ -67,8 +63,8 @@ module.exports = class Password {
     for (let i=0; i<this.symbols; i++) array.push(this._special())
     for (let i=0; i<this.digits; i++) array.push(this._number())
 
-    let password = this.shuffle(array)
-    password = password.join("")
+    let password = this._shuffle(array)
+    password = password.join('')
 
     return password
   }
