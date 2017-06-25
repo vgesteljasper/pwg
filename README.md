@@ -9,13 +9,13 @@ _check pwg-cli for the command line tool_
 install with yarn:
 
 ```Shell
-yarn add pwg
+$ yarn add pwg
 ```
 
-or with npm
+or with npm:
 
 ```Shell
-npm install pwg --save
+$ npm install pwg --save
 ```
 
 ## Options
