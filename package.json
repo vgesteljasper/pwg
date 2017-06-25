@@ -1,6 +1,6 @@
 {
   "name": "pwg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "secure password generator with options",
   "main": "index.js",
   "repository": "https://github.com/vgesteljasper/pwg",
