@@ -3,7 +3,7 @@ module.exports = class Password {
   constructor(length = 20, digits = 0, symbols = 0) {
 
     if (length < symbols + digits)
-      throw new Error('Configuration error: length needs to be >= digits + symbols')
+      return new Error('Configuration error: length needs to be >= digits + symbols')
 
     this.length = length
     this.digits = digits
