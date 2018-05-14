@@ -1,17 +1,20 @@
 {
   "name": "pwg",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "secure password generator with options",
   "main": "index.js",
   "license": "MIT",
-  "homepage": "https://github.com/vgesteljasper/pwg",
+  "homepage": "https://github.com/vjee/password-generator",
   "author": {
     "name": "Jasper Van Gestel",
-    "url": "https://github.com/vgesteljasper"
+    "url": "https://github.com/vjee"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/vgesteljasper/pwg.git"
+    "url": "git://github.com/vjee/password-generator.git"
+  },
+  "scripts": {
+    "test": "jest"
   },
   "keywords": [
     "password",
@@ -23,6 +26,11 @@
     "package"
   ],
   "bugs": {
-    "url": "https://github.com/vgesteljasper/pwg/issues"
+    "url": "https://github.com/vjee/password-generator/issues"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^22.4.3"
   }
 }

@@ -1,21 +1,21 @@
-# pwg
+# @vjee/password-generator
 
 **Generate secure passwords with options**
 
-_check [pwg-cli](https://github.com/vgesteljasper/pwg-cli) for the command line tool_
+_check [@vjee/password-generator-cli](https://www.npmjs.com/package/@vjee/password-generator-cli) for the CLI._
 
 ## Installation
 
 install with yarn:
 
 ```Shell
-$ yarn add pwg
+$ yarn add @vjee/password-generator
 ```
 
 or with npm:
 
 ```Shell
-$ npm install pwg --save
+$ npm install @vjee/password-generator --save
 ```
 
 ## Options
@@ -31,7 +31,7 @@ parameter | default | required | description
 pwd exports a Password class.
 
 ```JavaScript
-const Password = require('pwg')
+const Password = require('@vjee/password-generator')
 ```
 
 There are two methods for generating passwords:
